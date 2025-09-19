@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindred - Design Your AI Companion</title>
-    
+
     <!-- 
-      FIX: Changed stylesheet link to a relative path.
-      - From: /style.css
-      - To:   style.css
-      This ensures it loads correctly on GitHub Pages.
+      CRITICAL FIX: Added the Tailwind CSS script. 
+      This was the missing piece. It provides the core CSS framework 
+      that tells the browser how to style and lay out the page.
     -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- This is your custom stylesheet for things like the background and fonts. -->
     <link rel="stylesheet" href="style.css">
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -39,12 +42,7 @@
         </div>
     </main>
 
-    <!-- 
-      FIX: Changed script link to a relative path.
-      - From: /script.js
-      - To:   script.js
-      This ensures it loads correctly on GitHub Pages.
-    -->
+    <!-- This is your custom JavaScript for interactivity. -->
     <script src="script.js" defer></script>
 </body>
 </html>
