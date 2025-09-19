@@ -1,0 +1,102 @@
+/* STYLE.CSS
+  This file contains all the custom styling for the Kindred AI application.
+  It uses CSS variables for theme management (colors, fonts) and standard CSS for layout and aesthetics.
+  The design aims for a clean, futuristic, and calming user experience.
+*/
+
+:root {
+    --bg-color: #f7f8fc; 
+    --text-color: #111827;
+    --text-secondary: #4b5563;
+    --accent-glow: #0ea5e9;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --border-color: rgba(14, 165, 233, 0.25);
+    --glow-color: rgba(14, 165, 233, 0.15);
+    --input-bg: rgba(247, 248, 252, 0.8);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-y: auto; 
+}
+
+/* The cloud canvas provides the animated, interactive background.
+  It's fixed to the viewport and sits behind all other content.
+*/
+#cloud-canvas {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: -1;
+}
+
+/* The main container uses a semi-transparent background with a backdrop filter (blur)
+  to create a "glassmorphism" effect, appearing to float above the cloud background.
+  A subtle glow and border enhance this effect.
+*/
+.main-container {
+    position: relative;
+    z-index: 2;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), inset 0 0 25px var(--glow-color);
+}
+
+.font-heading {
+    font-family: 'Lora', serif;
+}
+
+/* Styling for the glowing "Copy Blueprint" orb */
+.luminous-orb {
+    background-image: radial-gradient(circle, #7dd3fc 0%, var(--accent-glow) 50%, #0284c7 100%);
+    box-shadow: 0 0 40px var(--accent-glow), 0 0 80px var(--accent-glow);
+}
+
+/* Container for the multi-step form, ensuring smooth transitions */
+.form-step-container {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual form steps with transitions for appearing/disappearing */
+.form-step {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    position: absolute;
+    width: 100%;
+}
+
+.form-step.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+/* Style for the selected option in the contentment bar */
+.contentment-option.selected {
+    background-color: var(--accent-glow);
+    color: white;
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* Custom scrollbar for the blueprint display area */
+.custom-scrollbar::-webkit-scrollbar { 
+    width: 6px; 
+}
+.custom-scrollbar::-webkit-scrollbar-track { 
+    background: transparent; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb { 
+    background-color: var(--border-color); 
+    border-radius: 6px; 
+}
+
