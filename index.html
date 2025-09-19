@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindred - Design Your AI Companion</title>
+    
+    <!-- 
+      FIX: Changed stylesheet link to a relative path.
+      - From: /style.css
+      - To:   style.css
+      This ensures it loads correctly on GitHub Pages.
+    -->
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+    <canvas id="cloud-canvas"></canvas>
+
+    <main class="main-container w-full max-w-3xl mx-auto my-12 sm:my-16 md:my-20 p-8 sm:p-12 rounded-3xl text-center">
+        <header>
+            <h1 class="font-heading text-5xl md:text-6xl font-bold tracking-wide text-gray-900">Kindred</h1>
+            <p id="header-subtitle" class="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto font-light leading-relaxed">
+                A sanctuary for self-discovery.
+            </p>
+        </header>
+
+        <div id="kindred-journey">
+            <div id="intro-container" class="mt-8">
+                 <p class="text-base text-[var(--text-secondary)] max-w-xl mx-auto leading-7">
+                    To begin, answer the following questions. Your responses will shape your AI companion's core identity, creating a unique blueprint for a guide tailored to your personal journey of self-realization.
+                </p>
+                <button id="start-btn" class="mt-8 px-10 py-4 bg-[var(--accent-glow)] hover:bg-sky-400 rounded-full transition-all duration-300 font-heading font-bold text-white shadow-lg shadow-sky-500/30 transform hover:scale-105">Begin</button>
+            </div>
+            <div id="form-and-final-container" class="form-step-container"></div>
+        </div>
+    </main>
+
+    <!-- 
+      FIX: Changed script link to a relative path.
+      - From: /script.js
+      - To:   script.js
+      This ensures it loads correctly on GitHub Pages.
+    -->
+    <script src="script.js" defer></script>
+</body>
+</html>
+
