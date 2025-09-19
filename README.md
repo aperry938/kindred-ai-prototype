@@ -22,20 +22,6 @@ As a project dealing with personal reflection, ethical considerations are paramo
 	•	Data Privacy: The application is entirely client-side. No user data is ever stored, transmitted to a server, or logged. The user's profile exists only in their local browser session and is cleared upon refresh.
 	•	AI's Role and Limitations: The generated blueprint explicitly instructs the AI to state its limitations. It clearly defines itself as a tool for self-reflection, not a substitute for licensed therapists or medical professionals. This is a critical ethical guardrail to prevent misuse.
 	•	Security Fortifications: The application implements a strict Content Security Policy (CSP) and Permissions-Policy via meta tags. This hardens the application against common web vulnerabilities like Cross-Site Scripting (XSS) and clickjacking, and follows the principle of least privilege by disabling unnecessary browser features.
-5. Future Work & PhD Research Directions
-This prototype serves as a launchpad for several potential avenues of academic research:
-	•	Longitudinal Studies: A future version could incorporate secure, consent-based data storage (e.g., using Firebase with user authentication) to conduct longitudinal studies on how the user-Kindred relationship evolves over time. Research Question: How does long-term interaction with a personalized AI companion affect an individual's sense of self-clarity and goal alignment?
-	•	Affective State Analysis: The user's text input within the application could be analyzed for sentiment and emotional tone. This data could be used to subtly adapt the UI (e.g., color palette) or the AI's initial welcome message to be more resonant with the user's current affective state.
-	•	Comparative Analysis: A controlled study could compare the efficacy of this structured "blueprint" approach against unguided interaction with a generic chatbot for tasks related to personal goal setting and problem-solving.
-6. Installation & Usage
-	1	Clone the repository: git clone [https://github.com/](https://github.com/)[your-username]/kindred-ai.git
-	2	
-	3	
-	4	Navigate to the directory: cd kindred-ai
-	5	
-	6	
-	7	Open index.html: Open the index.html file in any modern web browser. As the project is fully client-side, no local server is required.
-To use the application:
 	1	Click "Begin" to start the self-reflection journey.
 	2	Answer the series of questions to build your personal profile.
 	3	Upon completion, the system will generate a welcome message and a detailed AI blueprint.
