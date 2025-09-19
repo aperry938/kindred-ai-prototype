@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kindred - Design Your AI Companion</title>
-
-    <!-- 
-      CRITICAL FIX: Added the Tailwind CSS script. 
-      This was the missing piece. It provides the core CSS framework 
-      that tells the browser how to style and lay out the page.
-    -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- This is your custom stylesheet for things like the background and fonts. -->
-    <link rel="stylesheet" href="style.css">
     
-    <!-- Google Fonts -->
+    <!-- 
+      Project: Kindred - Design Your AI Companion
+      Author: Anthony Perry
+      Description: An application to generate a personalized AI companion blueprint based on user input.
+    -->
+
+    <!-- SECURITY FORTIFICATION: Content-Security-Policy (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; 
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self' https://generativelanguage.googleapis.com;
+        img-src 'self' data:;
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        frame-ancestors 'none';
+    ">
+    
+    <!-- SECURITY FORTIFICATION: Permissions-Policy -->
+    <meta http-equiv="Permissions-Policy" content="
+        accelerometer=(), 
+        camera=(), 
+        geolocation=(), 
+        gyroscope=(), 
+        magnetometer=(), 
+        microphone=(), 
+        payment=(), 
+        usb=()
+    ">
+
+    <title>Kindred - Design Your AI Companion</title>
+    <!-- External Libraries & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
     <canvas id="cloud-canvas"></canvas>
@@ -42,8 +68,8 @@
         </div>
     </main>
 
-    <!-- This is your custom JavaScript for interactivity. -->
-    <script src="script.js" defer></script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
 
